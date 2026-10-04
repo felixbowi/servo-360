@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head><script>window.livecodes = window.livecodes || {};</script><title>DeepAI Code Snippet</title><meta name="title" content="DeepAI Code Snippet"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><style id="__livecodes_styles__"></style><script src="https://cdn.jsdelivr.net/npm/@live-codes/browser-compilers@0.22.10/dist/jscpp/JSCPP.es5.min.js"></script><script src="https://livecodes.io/livecodes/lang-cpp-script.7fddce1adf847127795fc4aa61e39aea.js"></script><script src="https://cdn.jsdelivr.net/npm/es-module-shims@1.10.0/dist/es-module-shims.js" async=""></script><script type="importmap">{
+  "imports": {}
+}</script></head><body><script type="text/cpp">#include <ESP32Servo.h>
+
+Servo servo;
+const int pinServo = 18;
+
+void setup() {
+  servo.setPeriodHertz(50);          // Frekuensi servo standar
+  servo.attach(pinServo, 500, 2400); // Rentang pulsa dalam mikrodetik
+}
+
+void loop() {
+  servo.write(0);
+  delay(1000);
+
+  servo.write(90);
+  delay(1000);
+
+  servo.write(180);
+  delay(1000);
+}</script></body></html>
